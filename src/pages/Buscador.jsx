@@ -1,3 +1,5 @@
+import {BuscadorCiudad} from '../components/BuscadorCiudad'
+
 export function Buscador(){
-    return <div>Buscador</div>
+    return <BuscadorCiudad/>
 }
