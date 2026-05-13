@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import { Buscador } from './pages/Buscador'
 import { Ciudades } from './pages/Ciudades'
-import { Detalle } from './pages/Detalle'
+import { Detalles } from './pages/Detalles'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Buscador />} />
         <Route path="/ciudades" element={<Ciudades />} />
-        <Route path="/detalle" element={<Detalle />} />
+        <Route path="/detalle/:lat/:lon/:nombre" element={<Detalles />} />
       </Routes>
     </BrowserRouter>
   )
