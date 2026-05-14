@@ -7,20 +7,28 @@ export function BuscadorCiudad({ciudadesEncontradas}){
     function obtenerCiudades(){
         //Llamada a la API
         axios.get ('https://nominatim.openstreetmap.org/search', {
-            params: {q: busqueda, format: 'json', limit: 10,}
-        }).then((respuesta) => {ciudadesEncontradas(respuesta.data)})
+            params: {
+                q: busqueda, 
+                format: 'json', 
+                limit: 10,
+            }
+        }).then((respuesta) => 
+            {ciudadesEncontradas(respuesta.data)})
     }
 
-    return(
+    return (
         <div>
-            <h1>Busca una ciudad</h1>
-            <input 
-            type = "text" 
-            placeholder="Ej. Buenos Aires..."
-            value = {busqueda}
-            onChange= {(e) => setBusqueda(e.target.value)} //Actualizar la variable busqueda con lo que escribe
-            /> 
-            <button onClick={obtenerCiudades}>Buscar</button>
+            <h1 className="titulo">Pronóstico del Clima</h1>
+            <div className="buscador-contenedor">
+                <input
+                    type="text"
+                    placeholder="Buscar ciudad..."
+                    value={busqueda}
+                    onChange={(e) => setBusqueda(e.target.value)}
+                    className="buscador-input"
+                />
+                <button onClick={obtenerCiudades} className="buscador-boton">Buscar</button>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,160 @@
+.pagina-buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+}
+
+.titulo {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.buscador-contenedor {
+    display: flex;
+    gap: 10px;
+}
+
+.buscador-input {
+    width: 350px;
+    padding: 12px 16px 12px 36px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    background: white;
+    outline: none;
+}
+
+.buscador-boton {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buscador-boton:hover {
+    background: #1d4ed8;
+}
+
+.lista-ciudades {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+    width: 560px;
+}
+
+.ciudad-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: #1a1a2e;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.ciudad-card:hover {
+    background: #f0f4f8;
+    border-color: #2563eb;
+}
+
+.sin-ciudades {
+    color: #999;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.pagina-detalles {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.btn-volver {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+.titulo-ciudad {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #1a1a2e;
+}
+
+.fecha-hoy {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.tabla-contenedor {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.tabla-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla th {
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabla-fila td {
+    padding: 14px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #1a1a2e;
+}
+
+.temp-max {
+    color: #e85d04;
+    font-weight: 600;
+}
+
+.temp-min {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.cargando {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
