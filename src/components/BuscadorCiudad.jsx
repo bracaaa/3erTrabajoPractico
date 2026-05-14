@@ -2,15 +2,14 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-export function BuscadorCiudad(){
+export function BuscadorCiudad({ciudadesEncontradas}){
     const [busqueda, setBusqueda] = useState('') //Guarda una palabra
-    const [listaCiudades, setListaCiudades] = useState([]) //Guarda una lista
 
     function obtenerCiudades(){
         //Llamada a la API
         axios.get ('https://nominatim.openstreetmap.org/search', {
             params: {q: busqueda, format: 'json', limit: 10,}
-        }).then((respuesta) => {setListaCiudades(respuesta.data)})
+        }).then((respuesta) => {ciudadesEncontradas(respuesta.data)})
     }
 
     return(
