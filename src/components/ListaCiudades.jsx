@@ -7,7 +7,7 @@ export function ListaCiudades({ciudades}){
     return (
         <div>
         {ciudades.map ((ciudad) => (
-            <Ciudad key={Ciudad.place_id} ciudad={ciudad}/>
+            <Ciudad key={ciudad.place_id} ciudad={ciudad}/>
         ))}
         </div>
     )
